@@ -5,8 +5,8 @@ namespace Persistence
     {
         public static async Task SeedData(DataContext context)
         {
-            if(context.Offers.Any()) return;
-
+            if(context.Users.Any()) return;
+            
             var addresses = new List<Domain.Address>
             {
                 new Domain.Address
