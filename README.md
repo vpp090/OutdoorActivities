@@ -4,4 +4,4 @@ This repository is a for a website called Outdoor Activities. Outdoor Activities
 The site is using .NET 7 and React.
 
 
-****Under construction.******
+****Under construction.
