@@ -16,7 +16,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Domain.Offer>>> GetAllOffers()
         {
-            return await _dataContext.Offers.ToListAsync();
+            return await _dataContext.Offers.Include(o => o.User).ToListAsync();
         }
 
         [HttpGet("{id}")]
