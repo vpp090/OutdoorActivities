@@ -12,9 +12,9 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Domain.Offer>>> GetAllOffers()
+        public async Task<ActionResult<List<Domain.Offer>>> GetAllOffers(CancellationToken ctoken)
         {
-            return await _mediator.Send(new Application.Offers.List.Query());
+            return await _mediator.Send(new Application.Offers.List.Query(), ctoken);
         }
 
         [HttpGet("{id}")]
