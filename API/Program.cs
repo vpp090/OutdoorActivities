@@ -1,4 +1,5 @@
 using Application.Common;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -13,6 +14,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(opt => {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddMediatR(typeof(Application.Offers.List.Handler));
 
 builder.Services.AddCors(opt => {
     opt.AddPolicy(Constants.CorsPolicy, policy => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './App.css';
-import { Button, Header, List } from 'semantic-ui-react';
+import HeadBar from './HeadBar';
+
 
 function App() {
   const [offers, setOffers] = useState([]); 
@@ -16,18 +16,7 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Header as='h2' icon='users' content='Reactivities' />
-        
-        <List>
-          {offers.map((offer: any)=> (
-            <li key={offer.id}>
-              {offer.title}
-            </li>
-          ))}
-        </List>
-       <Button content='test' />
-    </div>
+    <HeadBar />
   );
 }
 

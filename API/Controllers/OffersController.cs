@@ -1,28 +1,26 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Persistence;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class OffersController : ControllerBase
+    public class OffersController : BaseApiController
     {
-        private DataContext _dataContext {get; set;}
-        public OffersController(DataContext dataContext)
+        private readonly IMediator _mediator;
+        public OffersController(IMediator mediator)
         {
-            _dataContext = dataContext;
+            _mediator = mediator;
         }
+
         [HttpGet]
         public async Task<ActionResult<List<Domain.Offer>>> GetAllOffers()
         {
-            return await _dataContext.Offers.Include(o => o.User).ToListAsync();
+            return await _mediator.Send(new Application.Offers.List.Query());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Domain.Offer>> GetOffer(Guid id)
         {
-            return await _dataContext.Offers.FindAsync(id);
+            return Ok();
         }
     }
 }

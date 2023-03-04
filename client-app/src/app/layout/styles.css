@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#category-dropdown{
+  background: #fff;
+  color: #0f0f0f;
+}
+
+.headbar-class{
+  margin-top: 0.5%;
+}
+
+.customCol1{
+  width: 10%;
+}
