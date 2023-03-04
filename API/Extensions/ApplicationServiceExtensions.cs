@@ -1,5 +1,6 @@
 
 
+using API.Services;
 using Application.Common;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ namespace API.Extensions
             });
 
             services.AddMediatR(typeof(Application.Offers.List.Handler));
-
+            
             services.AddCors(opt =>
             {
                 opt.AddPolicy(Constants.CorsPolicy, policy =>

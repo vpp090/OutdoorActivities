@@ -1,11 +1,9 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace Domain
 {
-    public class User
+    public class User : IdentityUser
     {
-        public Guid Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-
         public Profile Profile { get; set; }
         public DateTime DateCreated { get; set; }
     }

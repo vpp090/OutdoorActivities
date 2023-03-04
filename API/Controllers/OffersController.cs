@@ -5,12 +5,13 @@ namespace API.Controllers
 {
     public class OffersController : BaseApiController
     {
-        private readonly IMediator _mediator;
-        public OffersController(IMediator mediator)
+        
+        public OffersController(IMediator mediator) 
+                    : base(mediator)
         {
-            _mediator = mediator;
-        }
 
+        }
+        
         [HttpGet]
         public async Task<ActionResult<List<Domain.Offer>>> GetAllOffers(CancellationToken ctoken)
         {
