@@ -31,7 +31,11 @@ app.UseCors(Constants.CorsPolicy);
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapControllers();
+app.MapFallbackToController("Index", "Fallback");
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
@@ -46,7 +50,7 @@ try
 }
 catch(Exception ex)
 {
-    var logger = services.GetRequiredService<ILogger>();
+    var logger = services.GetRequiredService<ILogger<Program>>();
     logger.LogError(ex, "Error seeding");
 }
 

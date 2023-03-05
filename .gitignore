@@ -475,3 +475,27 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+wwwroot/
+API/wwwroot /asset-manifest.json
+API/wwwroot /favicon.ico
+API/wwwroot /index.html
+API/wwwroot /logo192.png
+API/wwwroot /logo512.png
+API/wwwroot /manifest.json
+API/wwwroot /robots.txt
+API/wwwroot /static/asset-manifest.json
+API/wwwroot /static/favicon.ico
+API/wwwroot /static/index.html
+API/wwwroot /static/logo192.png
+API/wwwroot /static/logo512.png
+API/wwwroot /static/manifest.json
+API/wwwroot /static/robots.txt
+API/wwwroot /static/css/main.45431d98.css
+API/wwwroot /static/css/main.45431d98.css.map
+API/wwwroot /static/js/787.627756db.chunk.js
+API/wwwroot /static/js/787.627756db.chunk.js.map
+API/wwwroot /static/js/main.40d31ef1.js
+API/wwwroot /static/js/main.40d31ef1.js.LICENSE.txt
+API/wwwroot /static/js/main.40d31ef1.js.map
+API/wwwroot /static/media/homePage.6776f242041477df2471.jpg
