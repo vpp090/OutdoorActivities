@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import HeadBar from './HeadBar';
+import HomeComp from '../../features/home/homecomp';
+import { Outlet } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 
 function App() {
@@ -16,7 +19,11 @@ function App() {
   }, [])
 
   return (
-    <HeadBar />
+    <>
+      <HeadBar />
+      <Outlet />
+    </>
+   
   );
 }
 
