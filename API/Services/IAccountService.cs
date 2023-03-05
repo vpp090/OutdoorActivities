@@ -6,6 +6,8 @@ namespace API.Services
     {
         Task<ServiceResponse<UserDto>> Login(LoginDto loginDto);
         Task<ServiceResponse<UserDto>> Register(RegisterDto registerDto);
+
+        Task<ServiceResponse<UserDto>> GetCurrentUser(string email);
         
     }
 }

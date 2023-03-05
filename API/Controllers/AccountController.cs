@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using API.DTOs;
 using API.Services;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
@@ -18,6 +20,7 @@ namespace API.Controllers
         }
         
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult<ServiceResponse<UserDto>>> Login(LoginDto loginDto)
         {
@@ -29,6 +32,7 @@ namespace API.Controllers
             return response;
         }
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<ActionResult<ServiceResponse<UserDto>>> Register(RegisterDto registerDto)
         {
@@ -38,6 +42,13 @@ namespace API.Controllers
                 return BadRequest(response);
 
             return response;
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult<ServiceResponse<UserDto>>> GetCurrentUser()
+        {
+            return await _accountService.GetCurrentUser(User.FindFirstValue(ClaimTypes.Email));
         }
     }
 }

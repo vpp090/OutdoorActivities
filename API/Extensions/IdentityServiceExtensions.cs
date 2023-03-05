@@ -20,9 +20,6 @@ namespace API.Extensions
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config[Constants.TokenKey]));
 
-            services.AddAuthentication();
-            services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<IAccountService, AccountService>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt =>
                 {
@@ -34,6 +31,9 @@ namespace API.Extensions
                         ValidateAudience = false
                     };
                 });
+
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IAccountService, AccountService>();
 
             return services;
         }
