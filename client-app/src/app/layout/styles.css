@@ -22,5 +22,9 @@ code {
 }
 
 .customCol1{
-  width: 10%;
+  width: 12%;
+}
+
+.basicButton{
+  background-color: #1F5446;
 }

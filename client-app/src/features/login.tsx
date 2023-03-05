@@ -1,5 +1,4 @@
-import { Formik } from "formik";
-import { Form } from "formik/dist/Form";
+import { Form, Formik } from "formik";
 import { Button } from "react-bootstrap";
 import CustomTextInput from "../app/common/form/CustomTextInput";
 
@@ -14,7 +13,7 @@ export default function LoginForm(){
                 <Form className="ui form" onSubmit={handleSubmit} autoComplete='off'>
                     <CustomTextInput placeholder="Email or Username" name='email' />
                     <CustomTextInput placeholder='Password' name='password' type='password'/>
-                    <Button variant='success' value='Login' type='submit'/>
+                    <Button variant='success' value='Login' type='submit'>Login</Button>
                 </Form>
             )}  
         </Formik>
