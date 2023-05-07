@@ -1,33 +1,51 @@
 import React from 'react'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
-import CustomDropDown from './CustomDropDown'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import smLogo from '../../Images/geargamelogo.png';
+
 
 
 export default function HeadBar(){
+
+    const styles={
+
+        headerst:{
+            color: "#386641"
+        },
+        headLinks:{
+            textDecoration: "none"
+        },
+        boldn: {
+            fontWeight: '700',
+            fontSize: '1.7rem'
+        },
+        headerSurv:{
+            color: "#9A031E"
+        },
+        realImage:{
+            height: '6rem'
+        },
+        dijon:{
+            backgroundColor: '#F2E8CF'
+        }
+
+    }
     return (
-        <Container className='headbar-class' fluid>
-            <Row>
-                <Col xs={4}>Logo here</Col>
-                <Col xs md="2" className='customCol1'>
-                    <CustomDropDown />
+        
+            <Row style={styles.dijon}>
+                <Col md={10} lg={12} sm={6} xs={2}>
+                    <Row>
+                        <Col className='pt-5 ps-5'><Link to="/store" style={styles.headLinks}><h2 style={{ ...styles.headerst, ...styles.boldn }}>STORE</h2></Link></Col>
+                        <Col className='pt-5'><Link to="/survival" style={styles.headLinks}><h2 style={{ ...styles.headerSurv, ...styles.boldn }}>SURVIVAL</h2></Link></Col>
+                        <Col className='pt-5'><Link to="/insurance" style={styles.headLinks}><h2 style={{ ...styles.headerst, ...styles.boldn }}>INSURANCE</h2></Link></Col>
+                        <Col className='text-center pb-3'><img className="img-fluid rounded-circle" style={styles.realImage} src={smLogo} alt="logo" /></Col>
+                        <Col className='pt-5'><Link to="/aboutus" style={styles.headLinks}><h2 style={{ ...styles.headerst, ...styles.boldn }}>ABOUT US</h2></Link></Col>
+                        <Col className='pt-5'><span>search component here</span></Col>
+                    </Row>
                 </Col>
-                <Col xs={2}>
-                    <InputGroup className="mb-3">
-                        <Form.Control
-                            type="search"
-                            placeholder="Търсене на продукти"
-                            aria-label="Search"
-                        />
-                        <InputGroup.Text>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </InputGroup.Text>
-                    </InputGroup>
-                </Col>
-                <Col xs={3} />
-                <Col><Button className="basicButton" variant='success'>Вход</Button> | <FontAwesomeIcon icon={faShoppingCart} /></Col>
-            </Row>
-        </Container>
+             </Row>
+             
+        
+            
     )
 }

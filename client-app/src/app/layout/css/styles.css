@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face{
+  font-family: "Panchang";
+  src: local("Panchange-Semibold"),
+  url('../../../fonts/Panchang/Panchang-Variable.ttf');
+  font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Jost&display=swap');
+
+#root{
+  width:100%;
+}
+
+.sector{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 51rem;
+  padding-top: 2rem;
+}
+
+.second-sector{
+   background-image:url('../../../Images/productImg.jpg');
+   
+}
+
+.sector-blue{
+  background-color: #457B9D;
+}
+.sector-green{
+  background-color: #386641;
+}
+
+.sector-beige{
+   background-color:#F2E8CF;
+}
+
+.fourth-sector{
+  background-image:url('../../../Images/survival.jpg');
+}
+
+.button-link{
+  text-decoration: none;
+ 
+}
+
+.button-link-blue{
+  color: #457B9D;
+}
+
+.button-link-beige{
+  color: #F2E8CF;
+}
+
+.button-wrapper-beige{
+   background-color: #F2E8CF;
+}
+
+
+.button-wrapper-red{
+  background-color: #9A031E;
+}
+
+
+.button-wrapper-green{
+  background-color: #386641;
+}
+
+.button-wrapper{
+   height: 4rem;
+   width: 11rem;
+   text-align: center;
+   padding-top: 1rem;
+   font-size: 1.4rem;
+   font-weight: 600;
+   border-radius: 0.8rem;
+}
+
+.button-wrapper a:hover{
+   color: #009933
+}
+
+
+.header-font{
+    font-family: 'Panchang';
+    font-style: normal;
+    font-weight: 600;
+    font-size:6rem;
+    line-height: 8rem;
+}
+
+.header-color-beige{
+  color: #F2E8CF;
+}
+
+.header-color-red{
+  color:#9A031E
+}
+
+.header-color-green{
+  color:#386641
+}
+
+.lorem-green{
+  color:#386641
+}
+
+.lorem-beige{
+  color: #F2E8CF;
+}
+
+.lorem{
+  
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 58px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.checky{
+  letter-spacing: 0.5rem;
+}
+
+.arrowPad{
+   padding-left: 10rem;
+}
+
+.logo-image{
+  width:25rem;
+  height: 25rem;
+}
